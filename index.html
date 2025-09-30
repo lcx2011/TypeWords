@@ -30,14 +30,7 @@
     <!--用于百度站长验证    -->
     <meta name="baidu-site-verification" content="codeva-Kw33xFT3p2"/>
 
-    <script>
-      ;(function () {
-        var src = '//cdn.jsdelivr.net/npm/eruda';
-        if (!/eruda=true/.test(window.location) && localStorage.getItem('active-eruda') != 'true') return;
-        document.write('<scr' + 'ipt src="' + src + '"></scr' + 'ipt>');
-        document.write('<scr' + 'ipt>eruda.init();</scr' + 'ipt>');
-      })();
-    </script>
+    <!-- Eruda 调试工具已禁用，避免 CDN CORS 问题 -->
     <script>
       if (!location.href.includes('localhost')
         && !location.href.includes('192.168')
@@ -67,14 +60,15 @@
         // 异常上报，只上报官方网站的，不然跨域的太多了
         if (location.host === '2study.top') {
           var a = document.createElement("script");
-          a.src = 'https://js.fundebug.cn/fundebug.2.8.6.min.js'
-          a.setAttribute("apikey", "a30bfcc79c4bfa9483368adaa6b363412513d7bb5f3f43a3a6bc634cfc211286");
-          var b = document.createElement("script");
-          b.src = 'https://js.fundebug.cn/fundebug.revideo.0.7.1.min.js'
+          // Fundebug 错误监控已禁用，避免 CORS 问题
+          // a.src = 'https://js.fundebug.cn/fundebug.2.8.6.min.js'
+          // a.setAttribute("apikey", "a30bfcc79c4bfa9483368adaa6b363412513d7bb5f3f43a3a6bc634cfc211286");
+          // var b = document.createElement("script");
+          // b.src = 'https://js.fundebug.cn/fundebug.revideo.0.7.1.min.js'
 
-          var s = document.getElementsByTagName("script")[0];
-          s.parentNode.insertBefore(a, s);
-          s.parentNode.insertBefore(b, s);
+          // var s = document.getElementsByTagName("script")[0];
+          // s.parentNode.insertBefore(a, s);
+          // s.parentNode.insertBefore(b, s);
         }
       }
     </script>

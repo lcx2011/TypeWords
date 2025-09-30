@@ -8,6 +8,7 @@
     "test": "",
     "build": "vite build && node scripts/generate-sitemap.js",
     "build-nocdn": "vite build",
+    "build-netlify": "vite build",
     "build-tsc": "vue-tsc && vite build",
     "report": "vite build",
     "preview": "vite preview",

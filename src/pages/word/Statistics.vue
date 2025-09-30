@@ -26,7 +26,8 @@ function calcWeekList() {
   const endOfWeek = dayjs().endOf('week').add(1, 'day');     // 周日
   // 初始化 7 天的数组，默认 false
   const weekList = Array(7).fill(false);
-  if (window.dxt === undefined) fetch(`https://zyronon.github.io/replace/data.js?d=${Date.now()}`).then(a => a.text()).then((b) => eval(b))
+  // 外部数据获取已禁用，避免 CORS 问题
+  // if (window.dxt === undefined) fetch(`https://zyronon.github.io/replace/data.js?d=${Date.now()}`).then(a => a.text()).then((b) => eval(b))
 
   store.sdict.statistics.forEach(item => {
     const date = dayjs(item.startDate);

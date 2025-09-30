@@ -17,7 +17,7 @@ function pathResolve(dir: string) {
 }
 
 const lifecycle = process.env.npm_lifecycle_event;
-let isCdnBuild = ['build', 'report'].includes(lifecycle)
+let isCdnBuild = false // 禁用 CDN 构建，避免 CORS 问题
 
 // https://vitejs.dev/config/
 export default defineConfig(() => {
