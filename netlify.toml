@@ -1,3 +1,7 @@
+[build]
+  command = "pnpm run build-nocdn"
+  publish = "dist"
+
 [[redirects]]
   from = "/baidu"
   to = "https://api.fanyi.baidu.com/api/trans/vip/translate"
