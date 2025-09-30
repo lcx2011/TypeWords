@@ -1,12 +1,5 @@
-[build]
-  command = "npm run build-netlify"
-  publish = "dist"
-
 [[redirects]]
   from = "/baidu"
   to = "https://api.fanyi.baidu.com/api/trans/vip/translate"
   status = 200
   force = true
-
-[build.environment]
-  NODE_VERSION = "18"
