@@ -20,7 +20,20 @@ const MAX_COUNT = 999999999999;
 // 爬虫主函数
 async function crawlWord(val, page,) {
   let word = val.word
-  const data = val
+  const data = {
+    ...val, // 保留原始数据
+    phonetic0: val.phonetic0 || '',
+    phonetic1: val.phonetic1 || '',
+    trans: val.trans || [],       // 关键：初始化trans数组
+    sentences: val.sentences || [],
+    phrases: val.phrases || [],
+    synos: val.synos || [],
+    relWords: val.relWords || {
+      root: '',
+      rels: []
+    },
+    etymology: val.etymology || []
+  };
   const url = `https://www.youdao.com/result?word=${encodeURIComponent(word)}&lang=en`;
 
   console.log(url)

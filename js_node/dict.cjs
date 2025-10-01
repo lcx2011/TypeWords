@@ -6,6 +6,17 @@ const SOURCE_DIR = path.join(__dirname, 'result2');
 // 中国考试
 const chinaExam = [
   {
+    id: 'gz1',
+    name: '高中1',
+    description: '高中1',
+    category: '中国考试',
+    tags: ['高中'],
+    url: '/dicts/gz1.json',
+    length: 331,
+    language: 'en',
+    languageCategory: 'en',
+  },
+  {
     id: 'cet4',
     name: 'CET-4',
     description: '大学英语四级词库',

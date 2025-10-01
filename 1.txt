@@ -1,0 +1,7 @@
+# 请在这里粘贴你的单词列表，一行一个单词
+# 例如：
+abandon
+ability
+about
+accept
+account
